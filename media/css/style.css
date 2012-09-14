@@ -1,0 +1,299 @@
+body
+{
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-family: Verdana;
+	font-size: 10pt;
+/*	background: #333333 url(../images/background.png); */
+	background: #333333;
+	color: rgba(255, 255, 255, 0.5);
+	line-height: 1.1;
+}
+
+b
+{
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+a,
+a:active,
+a:visited
+{
+	color: #20a0ff;
+	font-weight: bold;
+	text-decoration: none;
+}
+a:hover
+{
+	color: #0080e0;
+	text-decoration: underline;
+}
+
+#header
+{
+	margin: 0 auto 0 auto;
+	padding: 8px;
+	width: 750px;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.25);
+}
+
+h1
+{
+	font-family: Arial;
+	font-size: 30px;
+	font-weight: bold;
+	color: rgba(255, 255, 255, 0.9);
+}
+
+#loader
+{
+	position: absolute;
+	left: 250px;
+	right: 250px;
+	top: 100px;
+	height: 78px;
+	background: url(../images/loader_background.gif) right;
+}
+#preload_failed,
+#flashblock_warning
+{
+	position: absolute;
+	left: 270px;
+	right: 270px;
+	top: 200px;
+	padding: 16px;
+	color: #d08000;
+	background: #ffffa0;
+	text-align: center;
+	font-weight: bold;
+	border: 2px solid #d08000;
+	display: none;
+	z-index: 500;
+}
+
+#flashblock_warning
+{
+	padding-top: 58px;
+}
+
+.swf_timedout
+{
+	border: 2px solid #ff0000;
+	position: absolute;
+	width: 10%;
+	height: 40px;
+	top: 210px;
+	left: 45%;
+	background: #d08000;
+	z-index: 600;
+}
+
+.sm2_loaded,
+.movieContainer
+{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	left: -100px;
+	top: -100px;
+}
+
+#ingame_help
+{
+	position: absolute;
+	width: 520px;
+	top: 200px;
+	font-size: 12pt;
+	display: none;
+	color: #ffffff;
+}
+
+#ingame_help table tr td
+{
+	vertical-align: middle;
+}
+
+#ingame_help table tr td.td0
+{
+	text-align: center;
+}
+
+img.preload
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 1px;
+	height: 1px;
+}
+
+#progressbar
+{
+	width: 2%;
+	height: 100%;
+	background: url(../images/loader_foreground.gif);
+}
+
+#nyan
+{
+	position: absolute;
+	top: 46px;
+	left: 0;
+	right: 0;
+	height: 430px;
+	background: rgba(0, 0, 0, 0.15);
+}
+
+#nyan img
+{
+	image-rendering: -moz-crisp-edges;
+	-ms-interpolation-mode: nearest-neighbor;
+	-webkit-interpolation-mode: nearest-neighbor;
+}
+
+#nyan_score,
+#nyan_highest_score
+{
+	font-family: "Lucida Console", monospace;
+	font-size: 12pt;
+	position: absolute;
+	top: 0;
+	right: 4px;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#nyan_highest_score
+{
+	color: rgba(255, 255, 255, 0.35);
+}
+
+.nyan_tip
+{
+	position: absolute;
+	left: 50%;
+	top: 405px;
+	width: 700px;
+	display: none;
+	text-align: center;
+	color: #ffff00;
+	background: transparent;
+}
+
+.nyan_powerup_count
+{
+	font-family: "Lucida Console", monospace;
+	position: absolute;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#footer
+{
+	margin: 430px auto 0 auto;
+	padding: 8px;
+	width: 750px;
+	background: rgba(0, 0, 0, 0.25);
+}
+
+#sharing_stuffs
+{
+	margin: 0 0 8px 0;
+}
+
+p
+{
+	padding: 0 0 8px 0;
+}
+
+#tabs
+{
+	height: 20px;
+}
+
+#tabs ul li
+{
+	display: block;
+	float: left;
+	height: 16px;
+	font-weight: bold;
+	padding: 4px 32px 4px 16px;
+	background: transparent;
+	cursor: pointer;
+}
+
+#tabs ul li.active
+{
+	background: rgba(0, 0, 0, 0.25);
+	color: #ffffff;
+	cursor: arrow;
+	border-top: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.page
+{
+	float: none;
+	clear: both;
+	background: rgba(0, 0, 0, 0.25);
+	margin: 0 0 0 0;
+	padding: 8px 8px 8px 24px;
+	height: 400px;
+}
+
+.halfpage
+{
+	width: 325px;
+	margin: 0 16px 0 16px;
+	padding: 0;
+	float: left;
+}
+
+h2,
+h3
+{
+	color: rgba(255, 255, 255, 0.75);
+	margin: 16px 0 8px -16px;
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+#debug
+{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	font-size: 8pt;
+	padding: 4px;
+	background-color: rgba(255, 255, 0, 0.25);
+	color: #ffffff;
+}
+
+div.page ul li
+{
+	margin: 0 0 8px 0;
+}
+
+.controls b
+{
+	font-weight: bold;
+	background: #a0a0a0;
+	color: #000000;
+	font-weight: bold;
+	font-family: Lucida Console, Monospace;
+	padding: 0 3px;
+}
+
+#test_version
+{
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	background: #ffff00;
+	color: #ff0000;
+	font-size: 12pt;
+	font-weight: bold;
+	padding: 2px;
+	border: 2px solid #ff0000;
+}

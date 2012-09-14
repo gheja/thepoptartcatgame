@@ -1,0 +1,36 @@
+/* sigh... when will people start using _browsers_?... */
+
+body
+{
+	color: #e0e0e0;
+}
+
+#header,
+#footer,
+#tabs ul li.active,
+.tab
+{
+	background: url(../images/transparent_black_25.png);
+}
+
+h1,
+h2
+{
+	color: #ffffff;
+}
+
+#nyan
+{
+	background: url(../images/transparent_black_15.png);
+}
+
+#nyan_score,
+#nyan_highest_score
+{
+	color: #808080;
+}
+
+#nyan_highest_score
+{
+	color: #606060;
+}

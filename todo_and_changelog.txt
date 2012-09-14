@@ -1,0 +1,62 @@
+To be implemented:
+  x inventory
+  x powerup time
+  x help on loader/big_play_button
+
+
+Bugs... or features? :D
+  x sounds might get played regardless the muting state (master volume?!)
+  - sounds get out of sync on some browsers
+  x on IE and Opera the "Play!" button is not aligned to the center
+  x the music is not yet FlashBlock compatible if the Flash version must be used
+  x sometimes the music/sounds won't start after the "Play!" button pressed // the change of body.style.overflowY caused the problem on pause/unpause
+  x IE BUG: stack overflow of using  bindAsEventListener of prototype.js on _reload_ (!) - changed to window.setTimeout()
+  x IE BUG: Object.keys() of prototype.js is not working - created _keys()
+  - ColorScroller does not choose the shortest scrolling direction of hue
+  x single key shortcuts (on Opera) gets executed on 1-2-3 keys... ("kill the bubbling!")
+  x flashblock compatibility
+
+
+Changelog:
+  * r24/dev18 (2011.05.05.)
+    - rename cancelled...
+    - smoother gameplay (ticks are almost independent from frames)
+    - minor changes
+
+  * dev17 (2011.05.01.)
+//    - renamed project to "Nyan Game" (from "The Pop Tart Cat Game!")
+    - gfx: new coin250, new coin500
+
+  * r23/dev16 (2011.04.30.)
+    - disabled keepalive (the game lags on page load)
+    - changed stat call to the old ajax call (the game lags on page load, will not use Google Analytics this way...)
+
+  * r22/dev15b (2011.04.29.)
+    - added powerup icon
+    - added powerup bar
+    - the Booster powerup is now 500 ticks long (not 200)
+    - introduced Nyan.powerup_order to reorder the powerups
+    - powerups cannot be used again if they are in use already
+    - tick stat save changed (using iframe with Google Analytics)
+    - event stat gathering changed (using iframe with Google Analytics)
+    - keepalive implemented (inserted the whosamungus code into tick stat page)
+    - powerups are no longer decreased on "you won" screen (progress == 6)
+    - event bubbling killed (on Opera it caused problems) thx Claw
+    - new gfx: powerup icon + disabled + bar
+    - changed gfx: grey star (a bit brighter)
+    - added facebook "Share" button
+
+  * r21 (2011.04.28.)
+    - bugfix in the repeat: %15 was instead of %10
+
+  * r20 (2011.04.28.)
+    - the game is now truly endless (repeating levels from 15-25, and tips from a random pool)
+    - https://market.android.com/details?id=hu.butcher.nyanCat
+
+  * r19 (2011.04.28.)
+    - ColorScroller/SoundController: Tick() calls were mixed up... (bah?!)
+
+  * r18 (2011.04.28.)
+    - the Cat flashblock compatible
+    - more help
+    - new sfx for Shield

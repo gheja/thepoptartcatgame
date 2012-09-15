@@ -31,3 +31,5 @@ Prototype JavaScript framework
 
 SoundManager 2
   * http://www.schillmania.com/projects/soundmanager2/
+
+![Google Analytics tracking](http://gabor.heja.hu/ga2.php?id=16)

@@ -127,3 +127,9 @@ function _twitter(query, title)
 	  }
 	}).render().start();
 }
+
+function start_load()
+{
+	document.getElementById("start_load").style.display = "none";
+	init(4);
+}

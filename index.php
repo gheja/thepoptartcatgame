@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="<?php echo $dl_base_url; ?>media/css/style_ie.css" type="text/css" />
 		<![endif]-->
 		<script type="text/javascript" src="<?php echo $dl_base_url; ?>media/3rdparty/prototypejs/prototype.js"></script>
-		<script type="text/javascript" src="<?php echo $dl_base_url; ?>media/3rdparty/soundmanager2/soundmanager2-nodebug-jsmin.js"></script>
+		<script type="text/javascript" src="<?php echo $dl_base_url; ?>media/3rdparty/soundmanager2/soundmanager2.js"></script>
 		<script type="text/javascript" src="<?php echo $dl_base_url; ?>media/js/resources_x4.js"></script>
 		<script type="text/javascript" src="<?php echo $dl_base_url; ?>media/js/lib.js"></script>
 		<script type="text/javascript" src="<?php echo $dl_base_url; ?>media/js/preloader.js"></script>
@@ -255,13 +255,20 @@
 <!--		
 		<iframe src="keepalive.html?id=0&type=just_loaded" style="width: 1px; height: 1px; background: transparent;" id="keepalive_iframe"></iframe>
 -->
+
+		<!-- when the load finishes the menu music starts automatically - this is not supported in modern browsers if no user interaction happened with the page -->
+		<div id="start_load">
+			<button onclick="start_load(); return false;">Click here to load the game</button>
+		</div>
+
 		<script type="text/javascript">
 			var _dl_base_url = <?php echo "\"". $dl_base_url . "\""; ?>;
 			var _is_iframed = <?php echo (int) array_key_exists("iframe", $_GET); ?>;
 			<?php if (array_key_exists("tinycat", $_GET)) { ?>
-			init(1);
+			// NOTE: this no longer works with the "click to load" but it was just a joke anyways...
+			// init(1);
 			<?php } else { ?>
-			init(4);
+			// init(4);
 			<?php } ?>
 		</script>
 	</body>

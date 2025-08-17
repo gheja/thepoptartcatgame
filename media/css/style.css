@@ -297,3 +297,14 @@ div.page ul li
 	padding: 2px;
 	border: 2px solid #ff0000;
 }
+
+#start_load
+{
+	z-index: 700;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding-top: 200px;
+	position: absolute;
+	text-align: center;
+}

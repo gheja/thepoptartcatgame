@@ -51,6 +51,14 @@ var SoundController = {
 		var tmp = _keys(this.files);
 		var j = tmp[this.preload_index];
 		
+		// because of the first user interaction requirement the on load
+		// event handler is probably set up late, so check and update
+		// the status here
+		if (soundManager && soundManager.ok && soundManager.ok())
+		{
+			this.sound_manager_loaded = true;
+		}
+		
 		if (!this.sound_manager_loaded)
 		{
 			this.preload_tries++;
@@ -169,14 +177,17 @@ var SoundController = {
 	{
 		this.sound_manager_loaded = true;
 		$('flashblock_warning').style.display = "none";
-		$('sm2-container').className = "sm2_loaded";
+		try
+		{
+			$('sm2-container').className = "sm2_loaded";
+		}
+		catch (e) {}
 	},
 	
 	Init: function()
 	{
 //		$('debug').innerHTML += "sound_init<br/>";
-//		soundManager.url = _dl_base_url + "media/3rdparty/soundmanager2";
-		soundManager.url = "soundmanager2_flash";
+		soundManager.url = _dl_base_url + "media/3rdparty/soundmanager2";
 		soundManager.flashPollingInterval = 1000;
 		soundManager.allowScriptAccess = 'always';
 		soundManager.flashLoadTimeout = 60000; // one minute
